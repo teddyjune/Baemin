@@ -61,11 +61,12 @@ class BeaminScreen extends StatelessWidget {
               ),
             ],
           ),
-          Card(
-            child: Container(
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
               color: Colors.yellow,
-              height: 100,
             ),
+            height: 100,
           ),
           Row(
             children: [
@@ -95,12 +96,14 @@ class BeaminScreen extends StatelessWidget {
               ),
             ],
           ),
-          Card(
-            child: Container(
-              color: Colors.blue,
-              height: 150,
-            ),
-          ),
+          ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: Image.asset(
+                "assets/sale-banner.png",
+                width: 470,
+                height: 160,
+                fit: BoxFit.cover,
+              )),
           Row(
             children: [
               Flexible(
