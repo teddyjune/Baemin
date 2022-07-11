@@ -12,6 +12,7 @@ class BeaminScreen extends StatelessWidget {
         leading: const Icon(Icons.apps_outlined),
         title: const Text("경기 안양시 동안구 동편로 1..."),
         actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.expand_more)),
           IconButton(
               onPressed: () {}, icon: const Icon(Icons.notifications_none)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.mood)),
