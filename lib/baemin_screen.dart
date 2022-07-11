@@ -76,10 +76,14 @@ class BeaminScreen extends StatelessWidget {
                     children: const [
                       Text(
                         "포장",
-                        style:
-                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.bold),
                       ),
-                      Text("가까운 가게는 직접 가지러 가지요", style: TextStyle(fontSize: 15),),
+                      Text(
+                        "가까운 가게는 직접 가지러 가지요",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
                     ],
                   ),
                 ),
@@ -94,25 +98,34 @@ class BeaminScreen extends StatelessWidget {
           children: [
             Flexible(
               child: Card(
-                child: Container(
-                  color: Colors.green,
-                  height: 100,
+                child: Column(
+                  children: [
+                    Image.asset("assets/live.jpg",
+                        width: 40, height: 40, fit: BoxFit.cover),
+                    const Text("쇼핑 라이브"),
+                  ],
                 ),
               ),
             ),
             Flexible(
               child: Card(
-                child: Container(
-                  color: Colors.green,
-                  height: 100,
+                child: Column(
+                  children: [
+                    Image.asset("assets/gift.png",
+                        width: 40, height: 40, fit: BoxFit.cover),
+                    const Text("선물하기"),
+                  ],
                 ),
               ),
             ),
             Flexible(
               child: Card(
-                child: Container(
-                  color: Colors.green,
-                  height: 100,
+                child: Column(
+                  children: [
+                    Image.asset("assets/taste.png",
+                        width: 40, height: 40, fit: BoxFit.cover),
+                    const Text("전국별미"),
+                  ],
                 ),
               ),
             ),

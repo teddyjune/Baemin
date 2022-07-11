@@ -57,6 +57,9 @@ flutter:
     - assets/rider.png
     - assets/baemin-icon.png
     - assets/go-out.png
+    - assets/gift.png
+    - assets/live.jpg
+    - assets/taste.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
