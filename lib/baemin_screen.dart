@@ -63,9 +63,32 @@ class BeaminScreen extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.yellow,
+            color: Colors.white,
           ),
           height: 100,
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "포장",
+                        style:
+                            TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                      Text("가까운 가게는 직접 가지러 가지요", style: TextStyle(fontSize: 15),),
+                    ],
+                  ),
+                ),
+              ),
+              Image.asset("go-out.png",
+                  width: 170, height: 150, fit: BoxFit.cover),
+              const SizedBox(width: 15),
+            ],
+          ),
         ),
         Row(
           children: [
@@ -149,7 +172,8 @@ class BeaminScreen extends StatelessWidget {
                 ),
                 child: const Padding(
                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                  child: Text("4/6 모두보기", style: TextStyle(color: Colors.white)),
+                  child:
+                      Text("4/6 모두보기", style: TextStyle(color: Colors.white)),
                 ),
               ),
             ),
