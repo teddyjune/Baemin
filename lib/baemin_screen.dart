@@ -112,7 +112,8 @@ class BeaminScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text("토스페이로 결제하면",
-                            style: TextStyle(color: Colors.white, fontSize: 17)),
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 17)),
                         Text(
                           "지금 바로",
                           style: TextStyle(
@@ -131,10 +132,20 @@ class BeaminScreen extends StatelessWidget {
                 ),
                 Image.asset("baemin-icon.png",
                     width: 170, height: 150, fit: BoxFit.cover),
-                const SizedBox(width: 25),
+                const SizedBox(width: 8),
               ],
             ),
           ),
+        ),
+        Container(
+            decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.black,
+          ),
+            child: const Text(
+          "4/6 모두보기",
+          style: TextStyle(color: Colors.white)
+        ),
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -182,7 +193,7 @@ class BeaminScreen extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
       ]),
     );
   }
