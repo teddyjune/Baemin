@@ -102,50 +102,51 @@ class BeaminScreen extends StatelessWidget {
               height: 100,
               fit: BoxFit.cover,
             )),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Flexible(
-                child: Column(
-                  children: const [
-                    Icon(Icons.add_circle_outline),
-                    Text("포인트"),
-                  ],
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            elevation: 10,
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Flexible(
+                  child: Column(
+                    children: const [
+                      Icon(Icons.add_circle_outline),
+                      Text("포인트"),
+                    ],
+                  ),
                 ),
-              ),
-              Container(width: 2, height: 50, color: Colors.grey),
-              Flexible(
-                child: Column(
-                  children: const [
-                    Icon(Icons.archive_outlined),
-                    Text("쿠폰함"),
-                  ],
+                Container(width: 2, height: 50, color: Colors.grey),
+                Flexible(
+                  child: Column(
+                    children: const [
+                      Icon(Icons.archive_outlined),
+                      Text("쿠폰함"),
+                    ],
+                  ),
                 ),
-              ),
-              Container(width: 2, height: 50, color: Colors.grey),
-              Flexible(
-                child: Column(
-                  children: const [
-                    Icon(Icons.card_giftcard),
-                    Text("선물함"),
-                  ],
+                Container(width: 2, height: 50, color: Colors.grey),
+                Flexible(
+                  child: Column(
+                    children: const [
+                      Icon(Icons.card_giftcard),
+                      Text("선물함"),
+                    ],
+                  ),
                 ),
-              ),
-              Container(width: 2, height: 50, color: Colors.grey),
-              Flexible(
-                child: Column(
-                  children: const [
-                    Icon(Icons.favorite_border),
-                    Text("찜"),
-                  ],
+                Container(width: 2, height: 50, color: Colors.grey),
+                Flexible(
+                  child: Column(
+                    children: const [
+                      Icon(Icons.favorite_border),
+                      Text("찜"),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
       ]),
