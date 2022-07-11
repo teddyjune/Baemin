@@ -8,7 +8,7 @@ class BeaminScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xff28C1BC),
+        backgroundColor: const Color(0xff28C1BC),
         leading: const Icon(Icons.apps_outlined),
         title: const Text("경기 안양시 동안구 동편로 1..."),
         actions: [
@@ -95,51 +95,59 @@ class BeaminScreen extends StatelessWidget {
             ),
           ],
         ),
-        Expanded(
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(20.0),
-              child: Image.asset(
-                "assets/sale-banner.png",
-                height: 100,
-                fit: BoxFit.cover,
-              )),
-        ),
-        Row(
-          children: [
-            Flexible(
-              child: Card(
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
+        ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Image.asset(
+              "assets/sale-banner.png",
+              height: 100,
+              fit: BoxFit.cover,
+            )),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                child: Column(
+                  children: const [
+                    Icon(Icons.add_circle_outline),
+                    Text("포인트"),
+                  ],
                 ),
               ),
-            ),
-            Flexible(
-              child: Card(
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
+              Container(width: 2, height: 50, color: Colors.grey),
+              Flexible(
+                child: Column(
+                  children: const [
+                    Icon(Icons.archive_outlined),
+                    Text("쿠폰함"),
+                  ],
                 ),
               ),
-            ),
-            Flexible(
-              child: Card(
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
+              Container(width: 2, height: 50, color: Colors.grey),
+              Flexible(
+                child: Column(
+                  children: const [
+                    Icon(Icons.card_giftcard),
+                    Text("선물함"),
+                  ],
                 ),
               ),
-            ),
-            Flexible(
-              child: Card(
-                child: Container(
-                  color: Colors.grey,
-                  height: 100,
+              Container(width: 2, height: 50, color: Colors.grey),
+              Flexible(
+                child: Column(
+                  children: const [
+                    Icon(Icons.favorite_border),
+                    Text("찜"),
+                  ],
                 ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+        )
       ]),
     );
   }
