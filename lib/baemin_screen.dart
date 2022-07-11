@@ -95,57 +95,65 @@ class BeaminScreen extends StatelessWidget {
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 150,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.blue,
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text("토스페이로 결제하면",
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 17)),
-                        Text(
-                          "지금 바로",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text("1,500원 할인",
-                            style: TextStyle(
-                                color: Colors.yellow,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
+        Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.blue,
                 ),
-                Image.asset("baemin-icon.png",
-                    width: 170, height: 150, fit: BoxFit.cover),
-                const SizedBox(width: 8),
-              ],
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text("토스페이로 결제하면",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 17)),
+                            Text(
+                              "지금 바로",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text("1,500원 할인",
+                                style: TextStyle(
+                                    color: Colors.yellow,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold)),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Image.asset("baemin-icon.png",
+                        width: 170, height: 150, fit: BoxFit.cover),
+                    const SizedBox(width: 8),
+                  ],
+                ),
+              ),
             ),
-          ),
-        ),
-        Container(
-            decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.black,
-          ),
-            child: const Text(
-          "4/6 모두보기",
-          style: TextStyle(color: Colors.white)
-        ),
+            Positioned(
+              bottom: 20,
+              right: 30,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.black.withOpacity(0.6),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                  child: Text("4/6 모두보기", style: TextStyle(color: Colors.white)),
+                ),
+              ),
+            ),
+          ],
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
