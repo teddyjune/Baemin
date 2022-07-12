@@ -97,36 +97,51 @@ class BeaminScreen extends StatelessWidget {
         ),
         Row(
           children: [
-            Flexible(
-              child: Card(
-                child: Column(
-                  children: [
-                    Image.asset("assets/live.jpg",
-                        width: 40, height: 40, fit: BoxFit.cover),
-                    const Text("쇼핑 라이브"),
-                  ],
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Card(
+                  elevation: 5,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("assets/live.jpg",
+                          width: 40, height: 40, fit: BoxFit.cover),
+                      const Text("쇼핑 라이브"),
+                    ],
+                  ),
                 ),
               ),
             ),
-            Flexible(
-              child: Card(
-                child: Column(
-                  children: [
-                    Image.asset("assets/gift.png",
-                        width: 40, height: 40, fit: BoxFit.cover),
-                    const Text("선물하기"),
-                  ],
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Card(
+                  elevation: 5,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("assets/gift.png",
+                          width: 40, height: 40, fit: BoxFit.cover),
+                      const Text("선물하기"),
+                    ],
+                  ),
                 ),
               ),
             ),
-            Flexible(
-              child: Card(
-                child: Column(
-                  children: [
-                    Image.asset("assets/taste.png",
-                        width: 40, height: 40, fit: BoxFit.cover),
-                    const Text("전국별미"),
-                  ],
+            Expanded(
+              child: Container(
+                height: 100,
+                child: Card(
+                  elevation: 5,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("assets/taste.png",
+                          width: 40, height: 40, fit: BoxFit.cover),
+                      const Text("전국별미"),
+                    ],
+                  ),
                 ),
               ),
             ),
