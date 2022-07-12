@@ -42,23 +42,49 @@ class BeaminScreen extends StatelessWidget {
           ),
         ),
         Row(children: [
-          Flexible(
-            child: Card(
-                semanticContainer: true,
-                elevation: 10,
+          Expanded(
+            child: SizedBox(
+              height: 200,
+              child: Card(
+                elevation: 5,
+                margin: const EdgeInsets.all(10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                child: Image.asset("assets/food1.png", fit: BoxFit.fill)),
+                child: Image.asset("assets/food1.png", fit: BoxFit.fill),
+              ),
+            ),
           ),
-          Flexible(
-            child: Card(
-                semanticContainer: true,
-                elevation: 10,
+          Expanded(
+            child: SizedBox(
+              height: 200,
+              child: Card(
+                elevation: 5,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                child: Image.asset("assets/rider.png", fit: BoxFit.fill)),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text("배민",
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 10),
+                        Text("한 번에 한 집만",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold)),
+                        Text("빠르게 배달해요!",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    Image.asset("assets/pasta.png", fit: BoxFit.fill),
+                  ],
+                ),
+              ),
+            ),
           ),
         ]),
         Container(
@@ -98,7 +124,7 @@ class BeaminScreen extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Container(
+              child: SizedBox(
                 height: 100,
                 child: Card(
                   elevation: 5,
@@ -114,7 +140,7 @@ class BeaminScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 height: 100,
                 child: Card(
                   elevation: 5,
@@ -130,7 +156,7 @@ class BeaminScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 height: 100,
                 child: Card(
                   elevation: 5,
