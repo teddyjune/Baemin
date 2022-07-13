@@ -12,7 +12,7 @@ class BeaminScreen extends StatelessWidget {
         leading: const Icon(Icons.apps_outlined),
         title: const Text("경기 안양시 동안구 동편로 1..."),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.expand_more)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.expand_more)),
           IconButton(
               onPressed: () {}, icon: const Icon(Icons.notifications_none)),
           IconButton(onPressed: () {}, icon: const Icon(Icons.mood)),
@@ -32,9 +32,10 @@ class BeaminScreen extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
+                filled: true,
+                fillColor: Colors.white,
                 prefixIcon: Icon(
                   Icons.search,
-                  color: Colors.white,
                 ),
                 hintText: '닭발? 순대? 곱창?',
               ),
@@ -63,8 +64,9 @@ class BeaminScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
                 ),
-                child: Row(
+                child: Stack(
                   children: [
+                    Image.asset("assets/pasta.png", fit: BoxFit.fill),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
@@ -80,7 +82,6 @@ class BeaminScreen extends StatelessWidget {
                                 fontSize: 15, fontWeight: FontWeight.bold)),
                       ],
                     ),
-                    Image.asset("assets/pasta.png", fit: BoxFit.fill),
                   ],
                 ),
               ),
@@ -92,7 +93,6 @@ class BeaminScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: Colors.white,
           ),
-          height: 100,
           child: Row(
             children: [
               Expanded(
@@ -115,7 +115,7 @@ class BeaminScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Image.asset("go-out.png",
+              Image.asset("assets/go-out.png",
                   width: 170, height: 150, fit: BoxFit.cover),
               const SizedBox(width: 15),
             ],
@@ -210,7 +210,7 @@ class BeaminScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Image.asset("baemin-icon.png",
+                    Image.asset("assets/baemin-icon.png",
                         width: 170, height: 150, fit: BoxFit.cover),
                     const SizedBox(width: 8),
                   ],
